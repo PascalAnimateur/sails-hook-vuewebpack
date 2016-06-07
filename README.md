@@ -1,7 +1,5 @@
 # sails-hook-vue-webpack
 
-[![NPM version][npm-image]][npm-url]
-
 Sails.js hook that provides a Vue.js frontend using webpack.
 
 ## Install
