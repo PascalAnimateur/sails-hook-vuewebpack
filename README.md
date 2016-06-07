@@ -1,4 +1,4 @@
-# sails-hook-vue-webpack
+# sails-hook-vuewebpack
 
 Sails.js hook that provides a Vue.js frontend using webpack.
 
