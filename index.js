@@ -75,7 +75,7 @@ module.exports = function (sails) {
             inline: true,
             port: 3000
           },
-          quiet: true
+          quiet: false
         }
       }
     },
