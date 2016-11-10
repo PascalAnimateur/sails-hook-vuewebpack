@@ -10,14 +10,14 @@ npm install sails-hook-vuewebpack --save
 
 ## Getting started
 
-You have to create your Sails project using the `--no-frontend` option or disable the grunt hook in your `.sailsrc`
+You have to create your Sails project and disable the grunt hook in your `.sailsrc`
 ```
   "hooks": {
     "grunt": false
   }
 ```
 
-Configure babel by copying the following lines in the `.babelrc` file at the root of your project's folder
+Configure babel by copying the following lines in a new `.babelrc` file at the root of your project's folder
 ```
 {
   "presets": ["es2015", "stage-2"],
