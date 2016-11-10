@@ -25,6 +25,11 @@ module.exports = function (sails) {
           resolveLoader: {
             root: path.join(__dirname, '../../node_modules')
           },
+          resolve: {
+            alias: {
+              vue: 'vue/dist/vue.js'
+            }
+          },
           plugins: [
             new webpack.optimize.OccurenceOrderPlugin(),
             new webpack.NoErrorsPlugin(),
