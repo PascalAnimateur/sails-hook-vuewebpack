@@ -40,3 +40,15 @@ When lifted, Sails will serve the content of `.tmp/public` on the standard port,
 In development mode, the hook serves a dynamic copy of the bundle using [webpack-dev-server](https://webpack.github.io/docs/webpack-dev-server.html) on port `3000`. This provides Hot Module Replacement (HMR) functionality, i.e. changes in source files are reflected automatically in the browser without the need to refresh the page.
 
 In production mode, the bundle is served from the compiled static file `.tmp/public/js/build/bundle.js`.
+
+## Setting your own webpack config in your sails app
+
+Override this webpack configuration in two steps:
+
+1. create your own webpack config file and place it in your sails app's `/config` directory.
+2. edit your sails app's `config/bootstrap.js` file:
+    
+    ```
+    sails.hooks.vuewebpack = require('./your-webpack-config');
+    cb();
+    ```
