@@ -25,6 +25,16 @@ module.exports = function (sails) {
           resolveLoader: {
             root: path.join(__dirname, '../../node_modules')
           },
+          resolve: {
+            extensions: ['', '.js', '.vue'],
+            fallback: [path.join(__dirname, '../node_modules')],
+            alias: {
+              'vue$': 'vue/dist/vue',
+              'src': path.resolve(__dirname, '../../src'),
+              'assets': path.resolve(__dirname, '../../src/assets'),
+              'components': path.resolve(__dirname, '../../src/components')
+            }
+          },
           plugins: [
             new webpack.optimize.OccurenceOrderPlugin(),
             new webpack.NoErrorsPlugin(),
@@ -75,7 +85,19 @@ module.exports = function (sails) {
             inline: true,
             port: 3000
           },
-          quiet: true
+          stats: {
+            colors: true,
+            hash: false,
+            version: false,
+            timings: false,
+            assets: false,
+            chunks: false,
+            modules: false,
+            reasons: false,
+            children: false,
+            source: false,
+            publicPath: false
+          }
         }
       }
     },
